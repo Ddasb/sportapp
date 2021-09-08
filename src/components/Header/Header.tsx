@@ -1,3 +1,12 @@
-const Header = () => {};
+import React from "react";
+import { View } from "react-native";
+
+const Header = () => {
+  return (
+    <View>
+      <View></View>
+    </View>
+  );
+};
 
 export default Header;

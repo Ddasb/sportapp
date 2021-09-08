@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import {
   TemplateBackgroundColor,
   textAutoBackgroundColor
-} from "../../constants";
+} from "../../globalModifs";
 
 const HomescreenStyles = StyleSheet.create({
   root: {
@@ -13,7 +13,6 @@ const HomescreenStyles = StyleSheet.create({
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     alignItems: "center"
   },
   createButton: {
@@ -51,8 +50,14 @@ const HomescreenStyles = StyleSheet.create({
     marginBottom: 20,
     textDecorationLine: "underline"
   },
-  versionText: {
+  homescreenText: {
     color: textAutoBackgroundColor
+  },
+  appLogo: {
+    height: 200,
+    width: 300,
+    marginVertical: 35,
+    resizeMode: "contain"
   }
 });
 
