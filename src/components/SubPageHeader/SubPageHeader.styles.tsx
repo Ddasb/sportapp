@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const CreateAccountHeaderStyles = StyleSheet.create({
+const SubPageHeaderStyles = StyleSheet.create({
   headerAccount: {
     display: "flex",
     justifyContent: "space-between",
@@ -25,4 +25,4 @@ const CreateAccountHeaderStyles = StyleSheet.create({
   }
 });
 
-export default CreateAccountHeaderStyles;
+export default SubPageHeaderStyles;

@@ -135,6 +135,9 @@
       "replayCourse": "Rejouer votre parcours",
       "share": "Partager",
       "downloadGpx": "Télécharger le GPX"
+    },
+    "errors": {
+      "name": "Votre nom n'est pas valide."
     }
   },
   "en": {

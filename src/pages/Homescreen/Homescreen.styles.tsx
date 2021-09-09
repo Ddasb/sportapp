@@ -20,6 +20,7 @@ const HomescreenStyles = StyleSheet.create({
     borderWidth: 1,
     width: 250,
     height: 45,
+    marginVertical: 10,
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
@@ -33,7 +34,7 @@ const HomescreenStyles = StyleSheet.create({
     backgroundColor: textAutoBackgroundColor,
     width: 250,
     height: 45,
-    marginTop: 20,
+    marginVertical: 10,
     marginBottom: 20,
     display: "flex",
     justifyContent: "center",

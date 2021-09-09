@@ -4,17 +4,18 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 
 import Footer from "../../components/Footer/Footer";
-import { appVersion, TemplateExpirationDate } from "../../globalModifs";
+import { TemplateExpirationDate } from "../../globalModifs";
 import { AppContext } from "../../context/AppProvider";
 import tradRes from "./../../lang/traduction.json";
 import HomescreenStyles from "./Homescreen.styles";
 
 import Logo from "./../../assets/logo.png";
+import { appVersion } from "../../utils/utils";
 
 const Homescreen = () => {
   const { lang } = useContext(AppContext);
 
-  const navigation = useNavigation();
+  const navigation: any = useNavigation();
 
   return (
     <SafeAreaView style={HomescreenStyles.root}>
@@ -22,24 +23,29 @@ const Homescreen = () => {
         <View>
           <Image source={Logo} style={HomescreenStyles.appLogo} />
         </View>
-        <TouchableOpacity onPress={() => navigation.navigate("CreateAccount")}>
-          <View style={HomescreenStyles.createButton}>
-            <Text style={HomescreenStyles.createText}>
-              {tradRes[lang].utils.createAccount.toUpperCase()}
-            </Text>
-          </View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("CreateAccount")}
+          style={HomescreenStyles.createButton}
+        >
+          <Text style={HomescreenStyles.createText}>
+            {/* @ts-ignore */}
+            {tradRes[lang].utils.createAccount.toUpperCase()}
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => console.log("test")}>
-          <View style={HomescreenStyles.connectButton}>
-            <Text style={HomescreenStyles.connectText}>
-              {tradRes[lang].utils.iConnect.toUpperCase()}
-            </Text>
-          </View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ConnectAccount")}
+          style={HomescreenStyles.connectButton}
+        >
+          <Text style={HomescreenStyles.connectText}>
+            {/* @ts-ignore */}
+            {tradRes[lang].utils.iConnect.toUpperCase()}
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => console.log("test")}>
           <Text style={HomescreenStyles.forgotPassText}>
+            {/* @ts-ignore */}
             {tradRes[lang].utils.forgotMyCode.toUpperCase()}
           </Text>
         </TouchableOpacity>
