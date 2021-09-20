@@ -1,11 +1,6 @@
 import React, { useContext, useState } from "react";
-import {
-  SafeAreaView,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity
-} from "react-native";
+import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
+import { TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import ConnectAccountStyles from "./ConnectAccount.styles";
@@ -30,18 +25,20 @@ const ConnectAccount = () => {
           {tradRes[lang].utils.alreadyAccount.toUpperCase()}
         </Text>
         <TextInput
+          mode="outlined"
           style={ConnectAccountStyles.textInput}
-          placeholder="Entrez votre code"
+          label="Entrez votre code"
           placeholderTextColor="black"
           value={followCode}
           onChangeText={(val: string) => setFollocode(val)}
           clearButtonMode="always"
         />
+
         <TouchableOpacity
           onPress={() => console.log("ici")}
-          style={ConnectAccountStyles.createButton}
+          style={ConnectAccountStyles.connectButton}
         >
-          <Text style={ConnectAccountStyles.createText}>
+          <Text style={ConnectAccountStyles.connectText}>
             {/* @ts-ignore */}
             {tradRes[lang].utils.login.toUpperCase()}
           </Text>

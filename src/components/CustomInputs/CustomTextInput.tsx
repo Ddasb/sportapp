@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
-import { View, TextInput } from "react-native";
+import { View } from "react-native";
+import { TextInput } from "react-native-paper";
+
 import { AppContext } from "../../context/AppProvider";
+import { TemplateChallengeAutreName } from "../../globalModifs";
 
 import tradRes from "./../../lang/traduction.json";
 
@@ -13,23 +16,26 @@ const CustomTextInput = ({
   type: string;
   active: boolean;
 }) => {
-  const { lang } = useContext(AppContext);
-  // @ts-ignore
-  const errorText = tradRes[lang].errors[type];
-
-  const [inputValue, setInputValue] = useState("");
+  const { lang, createAccountInfo, setCreateAccountInfo } =
+    useContext(AppContext);
+  const textTrad =
+    // @ts-ignore
+    type === "other" ? TemplateChallengeAutreName : tradRes[lang].utils[type];
 
   return (
     <>
       {active ? (
         <View style={CustomTextInputStyles.textInputView}>
           <TextInput
-            style={CustomTextInputStyles.textInput}
-            placeholder={type}
+            mode="outlined"
+            label={textTrad}
             placeholderTextColor="black"
-            value={inputValue}
-            onChangeText={(val: string) => setInputValue(val)}
+            defaultValue={createAccountInfo[type]}
+            onChangeText={(val: string) =>
+              setCreateAccountInfo({ ...createAccountInfo, [type]: val })
+            }
             clearButtonMode="always"
+            style={{ backgroundColor: "#ffffff" }}
           />
         </View>
       ) : null}

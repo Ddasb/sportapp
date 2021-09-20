@@ -21,6 +21,8 @@ export const TemplateOrganisation = purgeString(
  */
 export const TemplateExpirationDate = new Date();
 export const TemplateIdOrganisation = "57";
+export const API_URL = "https://folomi.fr/api/sportapi.php";
+export const API_AUTH = "aiovbZRUOGTzbrvZRUGB,??452";
 
 /*
  *  COLORS

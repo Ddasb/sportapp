@@ -8,20 +8,24 @@ const ConnectAccountStyles = StyleSheet.create({
   content: {
     flex: 1,
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center"
   },
-  createButton: {
+  connectButton: {
     borderColor: "#000000",
-    borderWidth: 1,
     width: 250,
     height: 45,
     marginVertical: 10,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderWidth: 1.5,
+    borderRadius: 4
   },
-  createText: {
+  connectText: {
     color: "#000000",
     fontWeight: "bold",
     fontSize: 16
@@ -32,9 +36,9 @@ const ConnectAccountStyles = StyleSheet.create({
   },
   textInput: {
     width: 250,
-    borderBottomWidth: 1,
     marginBottom: 10,
-    paddingBottom: 5
+    paddingBottom: 5,
+    backgroundColor: "#ffffff"
   }
 });
 

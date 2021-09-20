@@ -17,13 +17,14 @@ const HomescreenStyles = StyleSheet.create({
   },
   createButton: {
     borderColor: textAutoBackgroundColor,
-    borderWidth: 1,
     width: 250,
     height: 45,
     marginVertical: 10,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderWidth: 1.5,
+    borderRadius: 4
   },
   createText: {
     color: textAutoBackgroundColor,
@@ -38,7 +39,8 @@ const HomescreenStyles = StyleSheet.create({
     marginBottom: 20,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderRadius: 4
   },
   connectText: {
     color: TemplateBackgroundColor,

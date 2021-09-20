@@ -7,7 +7,9 @@ const FooterStyles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderTopWidth: 0.5,
+    borderColor: "#000000"
   },
   footerSponsor: {
     width: "25%",
